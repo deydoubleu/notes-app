@@ -1,50 +1,41 @@
-# Welcome to your Expo app 👋
+# Notes App (React Native)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple notes app built with React Native. It allows users to create, read, update, and delete notes and store them using [Appwrite](https://apwr.dev/traversyfeb2025). It also uses authentication through Appwrite to allow users to sign up and log in and create private notes.
 
-## Get started
+<img src="/assets/images/screen.png" width="900">
 
-1. Install dependencies
+This project goes with my React Native Mini-Course on YouTube.
 
-   ```bash
-   npm install
-   ```
+## Usage
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Install the dependencies:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Rename the `.env.example` file to `.env` and fill in the required environment variables. You will need to sign into Appwrite [Here](https://apwr.dev/traversyfeb2025) and create a new project and database and fill in the required details in the `.env` file.
 
-## Learn more
+Run the app:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+You can then run the app on an emulator or on your phone using the Expo Go app.
 
-## Join the community
+You can also use your browser by going to http://localhost:8081/.
 
-Join our community of developers creating universal apps.
+Use EAS(Expo Application Services) to build your app for Android and iOS.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npm install -g eas-cli
+eas login
+eas init
+
+# For Android
+eas build --platform android
+
+# For iOS
+eas build --platform ios
+```
